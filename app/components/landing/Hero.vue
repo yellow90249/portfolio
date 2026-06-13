@@ -59,7 +59,7 @@ defineProps<{
           delay: 0.1
         }"
       >
-        {{ page.title }}
+        <span v-html="page.title" />
       </Motion>
     </template>
 
@@ -102,16 +102,15 @@ defineProps<{
         }"
       >
         <div
-          v-if="page.hero.links"
           class="flex items-center gap-2"
         >
-          <UButton v-bind="page.hero.links[0]" />
+          <UButton v-if="page.hero.links?.[0]" v-bind="page.hero.links[0]" />
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
             :to="global.available ? global.meetingLink : ''"
-            :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
+            :label="global.available ? '目前踴躍接案' : '目前無法接案'"
           >
             <template #leading>
               <span class="relative flex size-2">

@@ -1,13 +1,9 @@
 seo:
   title: "Gary - Backend Engineer"
   description: "Welcome to my portfolio! I'm Gary, a backend engineer specializing in distributed systems, cloud infrastructure, and high-performance APIs."
-title: "Hey, I'm Gary Backend Engineer"
-description: "I build reliable, scalable backend systems that power modern applications. Passionate about distributed systems, clean architecture, and developer tooling."
+title: "嗨，我是 Gary<br>一位後端工程師"
+description: "我打造穩定、可擴展的後端系統，維護現代應用程式運行。熱衷於分散式系統、微服務架構與 AI 工具。"
 hero:
-  links:
-    - label: "Use this template"
-      to: https://github.com/nuxt-ui-templates/portfolio
-      color: "neutral"
   images:
     - src: /hero/random-1.avif
       alt: Random Image 1
