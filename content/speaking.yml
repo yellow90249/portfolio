@@ -1,48 +1,48 @@
 title: Talks & Workshops
-description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
+description: Talks and workshops I've given on distributed systems, backend architecture, Kubernetes, and building reliable production infrastructure.
 links:
   - label: Invite me to speak
     size: md
 events:
   - category: Conference
-    title: "Bridging the Gap: Design Systems for Designer-Developer Collaboration"
+    title: "Zero-Downtime Migrations: Lessons from Moving 50M Rows in Production"
     date: "2024-10-26"
-    location: "VueConf US, Miami, FL"
+    location: "GopherCon, Chicago, IL"
     url: "#"
   - category: Conference
-    title: "Intuitive Interfaces: Applying UX Principles in Nuxt.js Applications"
+    title: "Designing for Failure: Building Resilient Microservices with Go"
     date: "2024-06-15"
-    location: "Nuxt Nation, Online"
+    location: "KubeCon NA, Salt Lake City, UT"
     url: "#"
   - category: Conference
-    title: "Accessibility First: Building Inclusive Web Apps"
+    title: "Practical Observability: Traces, Metrics, and Logs That Actually Help"
     date: "2023-11-08"
-    location: "Boston Web Performance Meetup, Boston, MA"
+    location: "SREcon APAC, Online"
   - category: Live talk
-    title: "Mastering Component Design in Figma & Vue"
+    title: "Database Indexing Deep Dive: Beyond the Basics"
     date: "2024-08-20"
-    location: "Design & Dev Boston Meetup, Boston, MA"
+    location: "Backend Engineering Meetup, Taipei"
     url: "#"
   - category: Live talk
-    title: "From Wireframe to Web: A Practical Front-End Workflow"
+    title: "gRPC in Production: Pitfalls and Patterns"
     date: "2024-03-05"
-    location: "Internal Workshop @ PreviousCompany Inc."
+    location: "Internal Tech Talk @ PreviousCompany Inc."
   - category: Live talk
-    title: "The Power of User Research in Product Development"
+    title: "Kafka Consumers at Scale: Ordering, Retries, and Dead-Letter Queues"
     date: "2023-09-12"
-    location: "Boston University Guest Lecture, Boston, MA"
+    location: "COSCUP, Taipei"
   - category: Podcast
-    title: "Designing for Developers: A UX Perspective"
+    title: "Building Boring Infrastructure That Never Pages You"
     date: "2024-07-18"
-    location: "Syntax.fm (Guest)"
+    location: "Go Time Podcast (Guest)"
     url: "#"
   - category: Podcast
-    title: "The Future of Front-End Frameworks & Design Tooling"
+    title: "Monolith to Microservices: When, Why, and How"
     date: "2024-01-30"
-    location: "Design Details Podcast (Guest)"
+    location: "Software Engineering Daily (Guest)"
     url: "#"
   - category: Podcast
-    title: "Building a Career in UX/UI & Development"
+    title: "Starting a Career in Backend Engineering"
     date: "2023-05-22"
-    location: "TechForward Boston Podcast"
+    location: "TechTalk Asia Podcast"
     url: "#"

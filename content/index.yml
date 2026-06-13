@@ -1,8 +1,8 @@
 seo:
-  title: "Emma Thompson - UX/UI Designer"
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Gary Thompson UX/UI Designer"
-description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
+  title: "Gary - Backend Engineer"
+  description: "Welcome to my portfolio! I'm Gary, a backend engineer specializing in distributed systems, cloud infrastructure, and high-performance APIs."
+title: "Hey, I'm Gary Backend Engineer"
+description: "I build reliable, scalable backend systems that power modern applications. Passionate about distributed systems, clean architecture, and developer tooling."
 hero:
   links:
     - label: "Use this template"
@@ -30,26 +30,26 @@ hero:
 about:
   title: "About Me"
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    Backend engineer with 6 years of experience building distributed systems and cloud-native applications.
+    I specialize in Go, Kubernetes, and designing scalable APIs that teams rely on in production.
 experience:
   title: Work Experience
   items:
-    - position: "Brand Designer at"
+    - position: "Senior Backend Engineer at"
       date: "2023 - Present"
       company:
         name: Nuxt
         logo: "i-simple-icons-nuxtdotjs"
         url: "https://nuxt.com"
         color: "#00DC82"
-    - position: "Assets Designer at"
+    - position: "Backend Engineer at"
       date: "2022 - 2023"
       company:
         name: Raycast
         logo: "i-simple-icons-raycast"
         url: "https://raycast.com"
         color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
+    - position: "Software Engineer at"
       date: "2020 - 2021"
       company:
         name: Linear
@@ -57,24 +57,24 @@ experience:
         url: "https://linear.app"
         color: "#5E6AD2"
 testimonials:
-  - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
+  - quote: "Gary architected our entire data pipeline from scratch. His deep understanding of distributed systems and ability to design for failure modes saved us countless hours of incident response. Throughput increased 5x while p99 latency dropped by half."
     author:
       name: 'Sarah Chen'
-      description: 'Product Director at Bloom Finance'
+      description: 'Engineering Manager at Bloom Finance'
       avatar:
         src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
+  - quote: "Working with Gary on our API redesign was a game-changer. He not only delivered a clean, well-documented REST/gRPC layer, but also pushed back on requirements that would have created long-term tech debt. Exactly the kind of senior engineer you want on a critical project."
     author:
       name: 'Michael Rodriguez'
-      description: 'Co-founder of Wavelength Music'
+      description: 'CTO at Wavelength'
       avatar:
         src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
+  - quote: "Gary migrated our monolith to microservices with zero downtime. His Kubernetes expertise and disciplined approach to observability meant the whole team had confidence throughout the rollout. Incident count dropped to near zero in the first month post-migration."
     author:
       name: 'Dr. Aisha Johnson'
-      description: 'Chief Innovation Officer at GreenTech Solutions'
+      description: 'VP of Engineering at GreenTech Solutions'
       avatar:
         src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
@@ -89,32 +89,32 @@ faq:
       questions:
         - label: What services do you offer?
           content: |
-            I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
-        - label: What is your design process like?
+            I specialize in backend engineering and cloud infrastructure. This includes designing and building REST/gRPC APIs, distributed systems architecture, database schema design and optimization, Kubernetes cluster setup and operations, CI/CD pipeline automation, and technical consulting for teams scaling their backend.
+        - label: What is your engineering process like?
           content: |
-            My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
+            I start with requirements gathering and system design, producing an architecture document before writing a single line of code. From there I iterate with small, well-tested increments — integration tests, load tests, and observability baked in from day one. I work closely with product and frontend teams to keep interfaces clean and versioned.
         - label: Do you work with startups?
           content: |
-            Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
+            Absolutely. Early-stage startups benefit from pragmatic architecture choices that can scale without a full rewrite. I help teams move fast without accumulating crippling technical debt.
     - title: Pricing & Timelines
       questions:
         - label: How much does a project typically cost?
           content: |
-            Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
+            It depends on scope. API design and implementation projects start around $5,000. Full system architecture engagements — including infrastructure, CI/CD, and observability — typically range from $10,000 to $30,000. For ongoing consulting, my day rate is $800.
         - label: What are your payment terms?
           content: |
-            I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
+            I require a 40% deposit to kick off the project, with the remaining 60% due on delivery. I accept bank transfer and Stripe.
         - label: How long does a typical project take?
           content: |
-            Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
+            A focused API project takes 2–4 weeks. A full microservices migration or greenfield backend build typically runs 2–4 months depending on complexity and team size.
         - label: Do you offer retainers or ongoing support?
           content: |
-            Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
+            Yes. Many clients keep me on a part-time retainer for ongoing architecture reviews, incident support, and feature development. Let me know if that's something you need.
     - title: About Me
       questions:
         - label: What do you enjoy most about your work?
           content: |
-            I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
+            I love designing systems that are both correct and operationally boring — the kind that run for months without surprises. Getting a distributed system to behave predictably under failure conditions is genuinely satisfying.
         - label: What are your hobbies outside of work?
           content: |
-            When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+            When I'm not writing Go or reviewing Kubernetes manifests, I enjoy contributing to open-source projects, participating in CTF competitions, and exploring local hiking trails.
