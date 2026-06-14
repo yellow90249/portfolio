@@ -33,7 +33,8 @@ if (!posts.value) {
         orientation="horizontal"
         variant="naked"
         v-bind="post"
-        :to="post.path"
+        :to="(post as any).externalUrl || post.path"
+        :target="(post as any).externalUrl ? '_blank' : undefined"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: 'px-0!',
@@ -45,7 +46,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            label="閱讀文章"
           >
             <template #trailing>
               <UIcon
