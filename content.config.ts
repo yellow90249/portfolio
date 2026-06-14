@@ -87,7 +87,7 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: 'articles/*.md',
       schema: z.object({
         minRead: z.number(),
         date: z.date(),
@@ -100,7 +100,7 @@ export default defineContentConfig({
       type: 'page',
       source: [
         { include: 'projects.yml' },
-        { include: 'blog.yml' }
+        { include: 'articles.yml' }
       ],
       schema: z.object({
         links: z.array(createButtonSchema())

@@ -11,7 +11,7 @@ export const navLinks: NavigationMenuItem[] = [{
 }, {
   label: '文章',
   icon: 'i-lucide-file-text',
-  to: '/blog'
+  to: '/articles'
 }, {
   label: '關於',
   icon: 'i-lucide-user',
