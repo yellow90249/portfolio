@@ -110,7 +110,7 @@ defineProps<{
             variant="ghost"
             class="gap-2"
             :to="global.available ? global.meetingLink : ''"
-            :label="global.available ? '踴躍接案中' : '目前無法接案'"
+            :label="global.available ? '積極接案中' : '目前無法接案'"
           >
             <template #leading>
               <span class="relative flex size-2">

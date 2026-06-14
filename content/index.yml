@@ -1,8 +1,8 @@
 seo:
-  title: "Gary - Backend Engineer"
-  description: "Welcome to my portfolio! I'm Gary, a backend engineer specializing in distributed systems, cloud infrastructure, and high-performance APIs."
+  title: "Gary - 後端工程師"
+  description: "歡迎來到我的作品集！我是 Gary，一位專精於分散式系統、雲端基礎設施與高效能 API 的後端工程師。"
 title: "嗨，我是 Gary<br>一位後端工程師"
-description: "我打造穩定、可擴展的後端系統，維護現代應用程式運行。熱衷於分散式系統、微服務架構與 AI 工具。"
+description: "我打造穩定、可擴展的後端系統，維護現代應用程式運行。熟悉分散式系統、微服務架構與 AI 工具。"
 hero:
   images:
     - src: /hero/test.jpg
@@ -26,28 +26,28 @@ hero:
     - src: /hero/random-9.avif
       alt: Random Image 9
 about:
-  title: "About Me"
+  title: "關於我"
   description: |
-    Backend engineer with 6 years of experience building distributed systems and cloud-native applications.
-    I specialize in Go, Kubernetes, and designing scalable APIs that teams rely on in production.
+    擁有 6 年建置分散式系統與雲端原生應用程式經驗的後端工程師。
+    專精於 Go、Kubernetes，以及設計團隊在生產環境中依賴的可擴展 API。
 experience:
-  title: Work Experience
+  title: 工作經歷
   items:
-    - position: "Senior Backend Engineer at"
+    - position: "資深後端工程師 @"
       date: "2023 - Present"
       company:
         name: Nuxt
         logo: "i-simple-icons-nuxtdotjs"
         url: "https://nuxt.com"
         color: "#00DC82"
-    - position: "Backend Engineer at"
+    - position: "後端工程師 @"
       date: "2022 - 2023"
       company:
         name: Raycast
         logo: "i-simple-icons-raycast"
         url: "https://raycast.com"
         color: "#FF6363"
-    - position: "Software Engineer at"
+    - position: "軟體工程師 @"
       date: "2020 - 2021"
       company:
         name: Linear
@@ -55,64 +55,64 @@ experience:
         url: "https://linear.app"
         color: "#5E6AD2"
 testimonials:
-  - quote: "Gary architected our entire data pipeline from scratch. His deep understanding of distributed systems and ability to design for failure modes saved us countless hours of incident response. Throughput increased 5x while p99 latency dropped by half."
+  - quote: "Gary 從零開始架構了我們整個資料管道。他對分散式系統的深刻理解，以及針對故障模式進行設計的能力，為我們節省了無數的事故應對時間。吞吐量提升了 5 倍，p99 延遲降低了一半。"
     author:
-      name: 'Sarah Chen'
-      description: 'Engineering Manager at Bloom Finance'
+      name: 'Lucas'
+      description: '友人一號'
       avatar:
-        src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Working with Gary on our API redesign was a game-changer. He not only delivered a clean, well-documented REST/gRPC layer, but also pushed back on requirements that would have created long-term tech debt. Exactly the kind of senior engineer you want on a critical project."
+        src: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Lucas'
+        srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Lucas 2x'
+  - quote: "與 Gary 一起重新設計 API 是一次徹底的改變。他不僅交付了乾淨、文件完整的 REST/gRPC 層，還主動反駁了會產生長期技術債的需求。這正是你在關鍵專案中希望擁有的那種資深工程師。"
     author:
-      name: 'Michael Rodriguez'
-      description: 'CTO at Wavelength'
+      name: 'Jason'
+      description: '友人二號'
       avatar:
-        src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Gary migrated our monolith to microservices with zero downtime. His Kubernetes expertise and disciplined approach to observability meant the whole team had confidence throughout the rollout. Incident count dropped to near zero in the first month post-migration."
+        src: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Jason'
+        srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Jason 2x'
+  - quote: "Gary 以零停機時間完成了我們從單體架構到微服務的遷移。他的 Kubernetes 專業知識以及對可觀測性的嚴謹態度，讓整個團隊在整個上線過程中都充滿信心。遷移後第一個月，事故數量降至幾乎為零。"
     author:
-      name: 'Dr. Aisha Johnson'
-      description: 'VP of Engineering at GreenTech Solutions'
+      name: 'Johnson'
+      description: '友人三號'
       avatar:
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Johnson'
+        srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Johnson 2x'
 blog:
-  title: "Latest Articles"
-  description: "Some of my recent thoughts"
+  title: "最新文章"
+  description: "最近學到的知識點"
 faq:
-  title: Frequently Asked Questions
-  description: Answers to common questions about my process and services.
+  title: 常見問題
+  description: 關於我的工作流程與服務的常見問題解答。
   categories:
-    - title: Services & Process
+    - title: 服務與流程
       questions:
-        - label: What services do you offer?
+        - label: 你提供哪些服務？
           content: |
-            I specialize in backend engineering and cloud infrastructure. This includes designing and building REST/gRPC APIs, distributed systems architecture, database schema design and optimization, Kubernetes cluster setup and operations, CI/CD pipeline automation, and technical consulting for teams scaling their backend.
-        - label: What is your engineering process like?
+            我專精於後端工程與雲端基礎設施。包含設計與建置 REST/gRPC API、分散式系統架構、資料庫 schema 設計與優化、Kubernetes 叢集建置與維運、CI/CD 流程自動化，以及為擴展後端的團隊提供技術顧問服務。
+        - label: 你的工程流程是什麼樣的？
           content: |
-            I start with requirements gathering and system design, producing an architecture document before writing a single line of code. From there I iterate with small, well-tested increments — integration tests, load tests, and observability baked in from day one. I work closely with product and frontend teams to keep interfaces clean and versioned.
-        - label: Do you work with startups?
+            我從需求收集與系統設計開始，在寫下第一行程式碼之前先產出架構文件。接著以小而經過充分測試的增量進行迭代——整合測試、壓力測試，以及從第一天起就內建的可觀測性。我與產品和前端團隊密切合作，確保介面乾淨且有版本管理。
+        - label: 你接新創公司的案子嗎？
           content: |
-            Absolutely. Early-stage startups benefit from pragmatic architecture choices that can scale without a full rewrite. I help teams move fast without accumulating crippling technical debt.
-    - title: Pricing & Timelines
+            當然。早期新創公司能從務實的架構選擇中受益，這些選擇可以擴展而不需要完全重寫。我幫助團隊快速推進，同時不累積沉重的技術債。
+    - title: 定價與時程
       questions:
-        - label: How much does a project typically cost?
+        - label: 一個專案通常要多少錢？
           content: |
-            It depends on scope. API design and implementation projects start around $5,000. Full system architecture engagements — including infrastructure, CI/CD, and observability — typically range from $10,000 to $30,000. For ongoing consulting, my day rate is $800.
-        - label: What are your payment terms?
+            視範圍而定。API 設計與實作專案起價約 5,000 美元。完整的系統架構合約——包含基礎設施、CI/CD 與可觀測性——通常在 10,000 到 30,000 美元之間。持續顧問服務的日費為 800 美元。
+        - label: 付款條件是什麼？
           content: |
-            I require a 40% deposit to kick off the project, with the remaining 60% due on delivery. I accept bank transfer and Stripe.
-        - label: How long does a typical project take?
+            我需要 40% 的訂金才能啟動專案，其餘 60% 於交付時付清。接受銀行轉帳和 Stripe。
+        - label: 一個典型的專案需要多久？
           content: |
-            A focused API project takes 2–4 weeks. A full microservices migration or greenfield backend build typically runs 2–4 months depending on complexity and team size.
-        - label: Do you offer retainers or ongoing support?
+            專注的 API 專案需要 2–4 週。完整的微服務遷移或全新的後端建置通常需要 2–4 個月，視複雜度和團隊規模而定。
+        - label: 你提供顧問保留金或持續支援嗎？
           content: |
-            Yes. Many clients keep me on a part-time retainer for ongoing architecture reviews, incident support, and feature development. Let me know if that's something you need.
-    - title: About Me
+            是的。許多客戶以兼職保留金的方式與我合作，用於持續的架構審查、事故支援和功能開發。如果您有這方面的需求，請告訴我。
+    - title: 關於我
       questions:
-        - label: What do you enjoy most about your work?
+        - label: 你最享受工作的哪個部分？
           content: |
-            I love designing systems that are both correct and operationally boring — the kind that run for months without surprises. Getting a distributed system to behave predictably under failure conditions is genuinely satisfying.
-        - label: What are your hobbies outside of work?
+            我喜歡設計既正確又在運維上「無聊」的系統——那種能連續運行數月而不出意外的系統。讓分散式系統在故障條件下也能可預測地運作，是真正令人滿足的事。
+        - label: 工作之外你有什麼愛好？
           content: |
-            When I'm not writing Go or reviewing Kubernetes manifests, I enjoy contributing to open-source projects, participating in CTF competitions, and exploring local hiking trails.
+            在不寫 Go 或審查 Kubernetes manifests 的時候，我喜歡貢獻開源專案、參加 CTF 競賽，以及探索在地的登山步道。
