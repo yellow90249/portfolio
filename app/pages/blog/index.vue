@@ -9,10 +9,14 @@ if (!page.value) {
     fatal: true
   })
 }
-const { data: posts } = await useAsyncData('blogs', () =>
+const { data: rawPosts } = await useAsyncData('blogs', () =>
   queryCollection('blog').order('date', 'DESC').all()
 )
-if (!posts.value) {
+const posts = computed(() => rawPosts.value?.map(post => ({
+  ...post,
+  date: new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })
+})))
+if (!rawPosts.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'blogs posts not found',

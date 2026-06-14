@@ -34,9 +34,9 @@ if (page.value.image) {
 const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString('zh-TW', {
     year: 'numeric',
-    month: 'short',
+    month: 'long',
     day: 'numeric'
   })
 }
