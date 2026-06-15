@@ -45,15 +45,24 @@ defineOgImage('Portfolio', { title, description })
         :alt="global.picture?.alt!"
       />
     </UPageHero>
-    <UPageSection
-      :ui="{
-        container: 'pt-0!'
-      }"
-    >
+    <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-8 lg:px-16 pb-16">
       <MDC
         :value="page.content"
         unwrap="p"
       />
-    </UPageSection>
+      <div v-if="page.skills?.length" class="mt-8">
+        <h3 class="text-xl font-bold mb-4">技術棧</h3>
+        <div class="flex flex-wrap gap-3">
+          <div
+            v-for="skill in page.skills"
+            :key="skill.name"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg border border-default bg-elevated text-sm"
+          >
+            <UIcon :name="skill.icon" class="size-4 shrink-0" />
+            <span>{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </UPage>
 </template>

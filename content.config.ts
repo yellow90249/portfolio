@@ -111,7 +111,11 @@ export default defineContentConfig({
       source: 'about.yml',
       schema: z.object({
         content: z.object({}),
-        images: z.array(createImageSchema()).optional()
+        images: z.array(createImageSchema()).optional(),
+        skills: z.array(z.object({
+          name: z.string(),
+          icon: z.string()
+        })).optional()
       })
     })
   }

@@ -1,13 +1,13 @@
 title: 關於我
 description: 擁有 4 到 6 年後端開發經驗，專注於高併發系統設計、API 整合與雲端部署，目前在台北從事後端工程師工作。
 content: |
-  你好，我是 **Gary**，一名後端工程師，擁有 5 年的開發經驗，目前就職於太禾科技。
+  你好，我是 **Gary**，一名擁有 5 年經驗的後端工程師。
 
-  主要技術棧涵蓋 **Golang**、**TypeScript**、**MySQL**、**Docker** 與 **GCP**，專注於後端系統設計、API 開發與雲端基礎設施部署。
+  主要技術棧涵蓋 **Golang**、**TypeScript**、**PostgreSQL**、**Docker** 與 **GCP**，專注於後端系統設計、API 開發與雲端基礎設施部署。
 
   ### 工作經歷
 
-  先後任職於保險金融、區塊鏈科技產業，負責電子錢包系統的後端開發與優化。識別高併發場景下的穩定性風險，評估架構取捨後選擇以 **Golang Goroutine** 重構核心服務，提升系統吞吐量。同時主導第三方支付 API 整合，預先定義錯誤處理規範與重試機制，降低外部服務不穩定帶來的交易失敗風險。
+  任職過保險金融科技、區塊鏈科技產業，負責電子錢包系統的後端開發與優化。識別高併發場景下的穩定性風險，評估架構取捨後選擇以 **Golang Goroutine** 重構核心服務，提升系統吞吐量。同時主導第三方支付 API 整合，預先定義錯誤處理規範與重試機制，降低外部服務不穩定帶來的交易失敗風險。
 
   在此之前，我曾獨立承接客戶預約系統開發、參與線上投保流程系統建置，以及整合企業工作流程系統，累積了從需求拆解到系統交付的完整開發經驗。
 
@@ -23,3 +23,20 @@ content: |
 
   歡迎瀏覽我的[專案](/projects)或[文章](/articles)，也歡迎直接聯繫！
 images: []
+skills:
+  - name: Golang
+    icon: i-simple-icons-go
+  - name: Node.js
+    icon: i-simple-icons-nodedotjs
+  - name: TypeScript
+    icon: i-simple-icons-typescript
+  - name: PostgreSQL
+    icon: i-simple-icons-postgresql
+  - name: Docker
+    icon: i-simple-icons-docker
+  - name: GCP
+    icon: i-simple-icons-googlecloud
+  - name: Kubernetes
+    icon: i-simple-icons-kubernetes
+  - name: GitHub Actions
+    icon: i-simple-icons-githubactions
