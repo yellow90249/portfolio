@@ -1,29 +1,25 @@
-title: About Me
-description: Learn more about my journey as a backend engineer, my approach to building distributed systems, and my passion for clean, reliable infrastructure.
+title: 關於我
+description: 擁有 4 到 6 年後端開發經驗，專注於高併發系統設計、API 整合與雲端部署，目前在台北從事後端工程師工作。
 content: |
-  Hi, I'm **Gary Chung**, a backend engineer with over six years of experience building systems that scale. I care deeply about reliability, observability, and writing code that my teammates can understand and maintain long after I've moved on.
+  你好，我是 **Gary**，一名後端工程師，擁有 5 年的開發經驗，目前就職於太禾科技。
 
-  My path started in computer science, where I fell in love with the elegance of algorithms and the unforgiving feedback loop of production systems. Since then I've worked across the stack — but I keep coming back to the backend, where the hard constraints live.
+  主要技術棧涵蓋 **Golang**、**TypeScript**、**MySQL**、**Docker** 與 **GCP**，專注於後端系統設計、API 開發與雲端基礎設施部署。
 
-  ### How I Work
+  ### 工作經歷
 
-  I believe good backend engineering starts with **clear thinking about data and failure modes**, not frameworks. Before writing code, I invest time in system design: understanding access patterns, sketching consistency boundaries, and identifying the failure scenarios that will matter at 3am.
+  先後任職於保險金融、區塊鏈科技產業，負責電子錢包系統的後端開發與優化。識別高併發場景下的穩定性風險，評估架構取捨後選擇以 **Golang Goroutine** 重構核心服務，提升系統吞吐量。同時主導第三方支付 API 整合，預先定義錯誤處理規範與重試機制，降低外部服務不穩定帶來的交易失敗風險。
 
-  I'm most productive in **Go** for services and **PostgreSQL** for storage, but I adapt to whatever the team is using. I've deployed on Kubernetes, wired up Prometheus/Grafana stacks, and debugged distributed tracing across microservices at scale.
+  在此之前，我曾獨立承接客戶預約系統開發、參與線上投保流程系統建置，以及整合企業工作流程系統，累積了從需求拆解到系統交付的完整開發經驗。
 
-  ### What I Value
+  ### 我重視的事
 
-  **Operational simplicity** — a system that's easy to reason about under pressure is more valuable than one that's elegant on paper. I bias toward boring technology and invest in runbooks, dashboards, and alerts so on-call is survivable.
+  **提前想清楚再動手** — 在開發前期釐清邊界、定義 API 規格、建立資料結構共識，可以避免大量後期返工。
 
-  **Incremental delivery** — I prefer shipping behind feature flags and dark-launching over big-bang releases. This applies to database migrations, API changes, and infrastructure upgrades alike.
+  **系統要能撐得住** — 高頻查詢的 SQL 優化、快取策略設計、併發安全，這些細節決定系統在壓力下的行為。
 
-  ### Beyond Work
+  ### 學歷
 
-  When I'm not in a terminal, I contribute to open-source projects, participate in CTF competitions, and go hiking to decompress. I also write occasionally about distributed systems and engineering culture.
+  國立台中科技大學・資訊工程學士（2016–2020），系統性學習資料結構、作業系統、資料庫與計算機網路，為後端開發建立理論基礎。
 
-  Thanks for stopping by. Browse my [projects](/projects) or [get in touch](/#contact) if you'd like to work together!
-images:
-  - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My workspace
-  - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: Exploring
+  歡迎瀏覽我的[專案](/projects)或[文章](/articles)，也歡迎直接聯繫！
+images: []
