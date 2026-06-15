@@ -1,5 +1,5 @@
 ---
-title: "GKE Deployment"
+title: "GKE 部署"
 description: 記錄將三個服務（Node.js API、兩個 Nuxt SSR）部署到 GKE Autopilot 的完整流程，包含 arm64/amd64、ImagePullBackOff、502 健康檢查、Supabase IPv6 等踩坑解法。
 date: 2026-06-14
 image: /images/gke.jpg
