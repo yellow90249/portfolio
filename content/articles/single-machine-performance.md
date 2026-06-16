@@ -1,7 +1,7 @@
 ---
 title: "單機架構的性能優化"
 description: 拆解單機系統的優化路線，以及用回應時間與吞吐量來衡量系統性能。
-date: 2026-06-15
+date: 2025-09-18
 image: /images/single-machine.jpg
 minRead: 6
 author:

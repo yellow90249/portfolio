@@ -1,7 +1,7 @@
 ---
 title: "伺服器渲染 SSR"
 description: 介紹伺服器端渲染的運作原理、與 CSR 的差異、優缺點，以及在 Nuxt.js 開發中需要注意的事項。
-date: 2026-06-15
+date: 2025-08-02
 image: /images/ssr.jpg
 minRead: 5
 author:

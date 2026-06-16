@@ -1,7 +1,7 @@
 ---
 title: "資訊安全實踐"
 description: 整理日常開發中常用的資安觀念與實踐方式。
-date: 2026-06-15
+date: 2025-12-05
 image: /images/security.jpg
 minRead: 8
 author:

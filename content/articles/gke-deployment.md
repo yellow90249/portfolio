@@ -1,7 +1,7 @@
 ---
 title: "GKE 部署"
 description: 記錄將個人電商（GShop）部署到 GKE Autopilot 的完整流程。
-date: 2026-06-14
+date: 2026-06-16
 image: /images/gke.jpg
 minRead: 5
 author:

@@ -1,7 +1,7 @@
 ---
 title: "用 Daily Snapshot 提升統計查詢速度"
-description: 資料量龐大導致查詢變慢，透過 Cron Job 將每日統計好的資料寫入 Snapshot Table，查的時候單表讀取，不需要跨表掃描。
-date: 2026-06-15
+description: 資料量龐大導致查詢變慢，透過 Cron Job 將每日統計好的資料寫入 Snapshot Table，查詢不再需要跨表掃描改為單表讀取。
+date: 2026-03-10
 image: /images/daily-snapshot.jpg
 minRead: 5
 author:

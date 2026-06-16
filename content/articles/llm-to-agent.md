@@ -1,7 +1,7 @@
 ---
 title: "從 LLM 到 Agent：打通底層邏輯"
 description: 從 Token、Context、Prompt，到 Tool、MCP、Agent，完整梳理 AI 應用開發的核心概念與底層運作原理。
-date: 2026-06-16
+date: 2025-07-20
 image: /images/data-flow.jpg
 minRead: 12
 author:
