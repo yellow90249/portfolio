@@ -1,0 +1,16 @@
+title: gshop-web — Nuxt.js SSR 電商前台部署於 GKE
+description: 使用 Nuxt.js SSR 建構電商購物前台，部署於 GKE Autopilot，並透過 Cloudflare Proxy 以 Full (Strict) TLS 模式對外提供服務。使用 Cloudflare Origin Certificate 存為 Kubernetes TLS Secret，實現端對端 HTTPS，並透過 GitHub Actions 完成自動化部署流程。
+image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1470&q=80
+url: "#"
+tags: ["Nuxt.js", "SSR", "GKE", "Cloudflare", "CI/CD"]
+date: "2025"
+challenges:
+  - problem: "本地 Apple Silicon build 的映像在 GKE 無法執行"
+    cause: "本地 build 產出 arm64 映像，GKE 節點為 amd64 架構"
+    solution: "CI/CD 改用 GitHub Actions ubuntu runner 進行 build，原生產出 amd64 映像，無需 Cloud Build"
+  - problem: "Cloudflare Full (Strict) 模式下 HTTPS 憑證設定"
+    cause: "Cloudflare 到 GCP 這段也需要合法憑證，自簽憑證不被接受"
+    solution: "從 Cloudflare 下載 Origin Certificate，透過 kubectl create secret tls 存入 Kubernetes，掛載於 Ingress tls 區塊"
+  - problem: "Ingress class 設定錯誤導致 Load Balancer 無法建立"
+    cause: "使用 spec.ingressClassName: gce，GKE controller 不認識此設定"
+    solution: "改為 annotation 方式：kubernetes.io/ingress.class: gce"
