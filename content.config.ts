@@ -85,6 +85,16 @@ export default defineContentConfig({
         date: z.date()
       })
     }),
+    projectPages: defineCollection({
+      type: 'page',
+      source: 'projects/*.md',
+      schema: z.object({
+        image: z.string().nonempty().editor({ input: 'media' }),
+        date: z.date(),
+        tags: z.array(z.string()),
+        author: createAuthorSchema()
+      })
+    }),
     blog: defineCollection({
       type: 'page',
       source: 'articles/*.md',

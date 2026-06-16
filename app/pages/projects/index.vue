@@ -11,7 +11,7 @@ if (!page.value) {
 }
 
 const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+  return queryCollection('projectPages').all()
 })
 
 const { global } = useAppConfig()
@@ -74,7 +74,7 @@ defineOgImage('Portfolio', { title, description })
         <UPageCard
           :title="project.title"
           :description="project.description"
-          :to="project.url"
+          :to="project.path"
           orientation="horizontal"
           variant="naked"
           :reverse="index % 2 === 1"
@@ -90,7 +90,7 @@ defineOgImage('Portfolio', { title, description })
           </template>
           <template #footer>
             <ULink
-              :to="project.url"
+              :to="project.path"
               class="text-sm text-primary flex items-center"
             >
               View Project
