@@ -5,26 +5,16 @@ title: "嗨，我是 Gary<br>一位後端工程師"
 description: "我打造穩定、可擴展的後端系統，維護應用程式運行。熟悉分散式系統、微服務架構與 AI 工具。"
 hero:
   images:
-    - src: /hero/test.jpg
-      alt: Test Image
-    - src: /hero/random-1.avif
-      alt: Random Image 1
-    - src: /hero/random-2.avif
-      alt: Random Image 2
-    - src: /hero/random-3.avif
-      alt: Random Image 3
-    - src: /hero/random-4.avif
-      alt: Random Image 4
-    - src: /hero/random-5.avif
-      alt: Random Image 5
-    - src: /hero/random-6.avif
-      alt: Random Image 6
-    - src: /hero/random-7.avif
-      alt: Random Image 7
-    - src: /hero/random-8.avif
-      alt: Random Image 8
-    - src: /hero/random-9.avif
-      alt: Random Image 9
+    - src: /hero/111.jpg
+      alt: Hero 1
+    - src: /hero/222.jpg
+      alt: Hero 2
+    - src: /hero/333.jpg
+      alt: Hero 3
+    - src: /hero/hero-4.jpg
+      alt: Hero 4
+    - src: /hero/hero-5.jpg
+      alt: Hero 5
 about:
   title: "關於我"
   description: |

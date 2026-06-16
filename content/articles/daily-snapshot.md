@@ -1,6 +1,6 @@
 ---
 title: "用 Daily Snapshot 提升統計查詢速度"
-description: 當資料量龐大導致查詢變慢，透過 Cron Job 每日預計算並寫入 Snapshot Table，將即時聚合查詢轉為單筆讀取。
+description: 資料量龐大導致查詢變慢，透過 Cron Job 將每日統計好的資料寫入 Snapshot Table，查的時候單表讀取，不需要跨表掃描。
 date: 2026-06-15
 image: /images/daily-snapshot.jpg
 minRead: 5
@@ -51,15 +51,15 @@ Snapshot 除了基本的金額與訂單數，還用 JSON 欄位儲存熱銷商�
 ```js
 // Sequelize Model
 DailySnapshot = {
-  date: DataTypes.DATEONLY,       // 唯一鍵，一天一筆
-  revenue: DataTypes.DECIMAL,     // 當日營業額（paid/shipped/delivered）
-  orderCount: DataTypes.INTEGER,  // 當日總訂單數
-  newUserCount: DataTypes.INTEGER,// 當日新增用戶數
+  date: DataTypes.DATEONLY, // 唯一鍵，一天一筆
+  revenue: DataTypes.DECIMAL, // 當日營業額（paid/shipped/delivered）
+  orderCount: DataTypes.INTEGER, // 當日總訂單數
+  newUserCount: DataTypes.INTEGER, // 當日新增用戶數
   avgOrderValue: DataTypes.DECIMAL,
-  topProducts: DataTypes.JSON,    // [{ productId, productName, totalRevenue, totalQuantity }]
-  topCategories: DataTypes.JSON,  // [{ categoryId, categoryName, totalRevenue, totalQuantity }]
+  topProducts: DataTypes.JSON, // [{ productId, productName, totalRevenue, totalQuantity }]
+  topCategories: DataTypes.JSON, // [{ categoryId, categoryName, totalRevenue, totalQuantity }]
   paymentMethods: DataTypes.JSON, // [{ method, count, amount }]
-}
+};
 ```
 
 ---
@@ -69,16 +69,18 @@ DailySnapshot = {
 以下是實際的計算函式，對四張表同時發出查詢後一次 upsert 進 snapshot table：
 
 ```js
-import sequelize from '../config/db.js';
-import { DailySnapshot } from '../models/index.js';
+import sequelize from "../config/db.js";
+import { DailySnapshot } from "../models/index.js";
 
 export async function buildDailySnapshot(targetDate) {
   // 預設計算昨天
-  const date = targetDate || (() => {
-    const d = new Date();
-    d.setDate(d.getDate() - 1);
-    return d;
-  })();
+  const date =
+    targetDate ||
+    (() => {
+      const d = new Date();
+      d.setDate(d.getDate() - 1);
+      return d;
+    })();
 
   const dateStr = toLocalDateStr(date);
   const start = new Date(date);
@@ -90,32 +92,42 @@ export async function buildDailySnapshot(targetDate) {
   const [[revenue], [userRow], topProducts, topCategories, paymentMethods] =
     await Promise.all([
       // 營業額、訂單數
-      sequelize.query(`
+      sequelize.query(
+        `
         SELECT
           COALESCE(SUM(total_amount) FILTER (WHERE status IN ('paid','shipped','delivered')), 0) AS revenue,
           COUNT(*) FILTER (WHERE status IN ('paid','shipped','delivered')) AS paid_count,
           COUNT(*) AS order_count
         FROM orders WHERE created_at >= :start AND created_at < :end
-      `, { replacements: { start, end }, type: sequelize.QueryTypes.SELECT }),
+      `,
+        { replacements: { start, end }, type: sequelize.QueryTypes.SELECT },
+      ),
 
       // 新增用戶數
-      sequelize.query(`
+      sequelize.query(
+        `
         SELECT COUNT(*) AS count FROM users
         WHERE created_at >= :start AND created_at < :end
-      `, { replacements: { start, end }, type: sequelize.QueryTypes.SELECT }),
+      `,
+        { replacements: { start, end }, type: sequelize.QueryTypes.SELECT },
+      ),
 
       // 熱銷商品 Top 10
-      sequelize.query(`
+      sequelize.query(
+        `
         SELECT oi.product_id AS "productId", oi.product_name AS "productName",
                SUM(oi.subtotal) AS "totalRevenue", SUM(oi.quantity) AS "totalQuantity"
         FROM order_items oi JOIN orders o ON o.id = oi.order_id
         WHERE o.created_at >= :start AND o.created_at < :end AND o.status != 'cancelled'
         GROUP BY oi.product_id, oi.product_name
         ORDER BY "totalRevenue" DESC LIMIT 10
-      `, { replacements: { start, end }, type: sequelize.QueryTypes.SELECT }),
+      `,
+        { replacements: { start, end }, type: sequelize.QueryTypes.SELECT },
+      ),
 
       // 各類別銷售 Top 10
-      sequelize.query(`
+      sequelize.query(
+        `
         SELECT p.category_id AS "categoryId", c.name AS "categoryName",
                SUM(oi.subtotal) AS "totalRevenue", SUM(oi.quantity) AS "totalQuantity"
         FROM order_items oi
@@ -125,16 +137,21 @@ export async function buildDailySnapshot(targetDate) {
         WHERE o.created_at >= :start AND o.created_at < :end AND o.status != 'cancelled'
         GROUP BY p.category_id, c.name
         ORDER BY "totalRevenue" DESC LIMIT 10
-      `, { replacements: { start, end }, type: sequelize.QueryTypes.SELECT }),
+      `,
+        { replacements: { start, end }, type: sequelize.QueryTypes.SELECT },
+      ),
 
       // 付款方式分佈
-      sequelize.query(`
+      sequelize.query(
+        `
         SELECT pay.method, COUNT(*) AS count, SUM(pay.amount) AS amount
         FROM payments pay JOIN orders o ON o.id = pay.order_id
         WHERE o.created_at >= :start AND o.created_at < :end
           AND o.status IN ('paid','shipped','delivered')
         GROUP BY pay.method
-      `, { replacements: { start, end }, type: sequelize.QueryTypes.SELECT }),
+      `,
+        { replacements: { start, end }, type: sequelize.QueryTypes.SELECT },
+      ),
     ]);
 
   const rev = parseFloat(revenue.revenue) || 0;
@@ -147,20 +164,20 @@ export async function buildDailySnapshot(targetDate) {
     orderCount: parseInt(revenue.order_count) || 0,
     newUserCount: parseInt(userRow.count) || 0,
     avgOrderValue: paidCount > 0 ? parseFloat((rev / paidCount).toFixed(2)) : 0,
-    topProducts: topProducts.map(r => ({
+    topProducts: topProducts.map((r) => ({
       ...r,
       totalRevenue: parseFloat(r.totalRevenue),
-      totalQuantity: parseInt(r.totalQuantity)
+      totalQuantity: parseInt(r.totalQuantity),
     })),
-    topCategories: topCategories.map(r => ({
+    topCategories: topCategories.map((r) => ({
       ...r,
       totalRevenue: parseFloat(r.totalRevenue),
-      totalQuantity: parseInt(r.totalQuantity)
+      totalQuantity: parseInt(r.totalQuantity),
     })),
-    paymentMethods: paymentMethods.map(r => ({
+    paymentMethods: paymentMethods.map((r) => ({
       method: r.method,
       count: parseInt(r.count),
-      amount: parseFloat(r.amount)
+      amount: parseFloat(r.amount),
     })),
   });
 }
@@ -178,13 +195,13 @@ export async function buildDailySnapshot(targetDate) {
 ## Cron Job 排程
 
 ```js
-import cron from 'node-cron';
-import { buildDailySnapshot } from './jobs/dailySnapshot.js';
+import cron from "node-cron";
+import { buildDailySnapshot } from "./jobs/dailySnapshot.js";
 
 // 每天凌晨 00:05 執行（留 5 分鐘緩衝確保跨日資料落庫）
-cron.schedule('5 0 * * *', async () => {
+cron.schedule("5 0 * * *", async () => {
   await buildDailySnapshot();
-  console.log('[Snapshot] 昨日 snapshot 建立完成');
+  console.log("[Snapshot] 昨日 snapshot 建立完成");
 });
 ```
 
@@ -197,7 +214,7 @@ cron.schedule('5 0 * * *', async () => {
 ```js
 // ✅ 讀最新一筆 snapshot，毫秒級回應
 const snapshot = await DailySnapshot.findOne({
-  order: [['date', 'DESC']]
+  order: [["date", "DESC"]],
 });
 ```
 
@@ -223,7 +240,7 @@ Snapshot 是某個時間點的快照，但訂單狀態會在那之後繼續變�
 
 ```js
 // 每天重算最近 7 天
-cron.schedule('5 0 * * *', async () => {
+cron.schedule("5 0 * * *", async () => {
   for (let i = 1; i <= 7; i++) {
     const d = new Date();
     d.setDate(d.getDate() - i);
@@ -252,11 +269,11 @@ cron.schedule('5 0 * * *', async () => {
 
 ## 效果對比
 
-| 指標 | 改善前 | 改善後 |
-|------|--------|--------|
-| 查詢時間 | 數秒 | < 10ms |
-| 資料庫負載 | 每次請求跨表掃描 | 每日一次聚合 |
-| 資料即時性 | 即時 | 前一天結算準確 |
+| 指標       | 改善前           | 改善後         |
+| ---------- | ---------------- | -------------- |
+| 查詢時間   | 數秒             | < 10ms         |
+| 資料庫負載 | 每次請求跨表掃描 | 每日一次聚合   |
+| 資料即時性 | 即時             | 前一天結算準確 |
 
 ---
 

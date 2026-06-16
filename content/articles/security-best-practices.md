@@ -1,5 +1,5 @@
 ---
-title: "資訊安全最佳實踐"
+title: "資訊安全實踐"
 description: 整理日常開發中常用的資安觀念與實踐方式。
 date: 2026-06-15
 image: /images/security.jpg
