@@ -1,5 +1,5 @@
 seo:
-  title: "Gary - 後端工程師"
+  title: "Gary Portfolio"
   description: "歡迎來到我的作品集！我是 Gary，一位專精於分散式系統、雲端基礎設施與高效能 API 的後端工程師。"
 title: "嗨，我是 Gary<br>一位後端工程師"
 description: "我打造穩定、可擴展的後端系統，維護應用程式運行。熟悉分散式系統、微服務架構與 AI 工具。"
@@ -24,7 +24,13 @@ experience:
   title: 工作經歷
   items:
     - position: "後端工程師 @"
-      date: "2023 - 現在"
+      date: "2026 - 現在"
+      company:
+        name: 鑽誠科技
+        url: "https://nuxt.com"
+        color: "#fdcb6e"
+    - position: "後端工程師 @"
+      date: "2023 - 2026"
       company:
         name: 太禾科技
         url: "https://nuxt.com"

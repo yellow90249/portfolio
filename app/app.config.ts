@@ -24,7 +24,7 @@ export default defineAppConfig({
     },
   },
   footer: {
-    credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
+    credits: `Gary Portfolio • © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [
       {
