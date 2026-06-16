@@ -71,7 +71,7 @@ testimonials:
         srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Johnson 2x'
 blog:
   title: "最新文章"
-  description: "最近的一些想法"
+  description: "最近的一些想法。"
 faq:
   title: 常見問題
   description: 關於我的工作流程與服務的常見問題解答。

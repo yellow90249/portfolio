@@ -1,7 +1,7 @@
 ---
 title: gshop-dashboard
 description: 使用 Nuxt.js SSR 建構電商管理後台，部署於 GKE Autopilot，透過 GitHub Actions 自動化部署。
-date: 2025-01-01
+date: 2026-06-15
 image: /projects/dashboard.jpg
 tags: ["Nuxt.js", "SSR", "GKE", "Kubernetes", "CI/CD"]
 author:
