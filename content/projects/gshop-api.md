@@ -2,7 +2,7 @@
 title: gshop-api
 description: 使用 Node.js/Express 建構 REST API，部署於 GKE Autopilot，並透過 GitHub Actions 實現自動化 CI/CD。
 date: 2025-01-01
-image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1470&q=80
+image: /projects/api.jpg
 tags: ["Node.js", "GKE", "Kubernetes", "CI/CD", "PostgreSQL"]
 author:
   name: Gary

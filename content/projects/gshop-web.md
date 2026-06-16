@@ -2,7 +2,7 @@
 title: gshop-web
 description: 使用 Nuxt.js SSR 建構電商購物前台，部署於 GKE Autopilot，透過 Cloudflare Proxy 以 Full (Strict) TLS 對外提供服務。
 date: 2025-01-01
-image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1470&q=80
+image: /projects/web.jpg
 tags: ["Nuxt.js", "SSR", "GKE", "Cloudflare", "CI/CD"]
 author:
   name: Gary
