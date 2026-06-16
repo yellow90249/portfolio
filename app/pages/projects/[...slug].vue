@@ -83,21 +83,21 @@ if (page.value.image) {
             <p class="text-sm text-muted mb-3">相關連結</p>
             <div class="flex flex-wrap gap-3">
               <UButton
-                v-if="page.url"
-                :to="page.url"
-                target="_blank"
-                icon="i-simple-icons-github"
-                label="GitHub"
-                color="neutral"
-                variant="subtle"
-                size="sm"
-              />
-              <UButton
                 v-if="page.demoUrl"
                 :to="page.demoUrl"
                 target="_blank"
                 icon="i-lucide-external-link"
                 label="Live Demo"
+                color="neutral"
+                variant="subtle"
+                size="sm"
+              />
+              <UButton
+                v-if="page.url"
+                :to="page.url"
+                target="_blank"
+                icon="i-simple-icons-github"
+                label="GitHub"
                 color="neutral"
                 variant="subtle"
                 size="sm"
