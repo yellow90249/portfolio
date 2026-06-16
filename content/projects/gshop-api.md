@@ -1,8 +1,9 @@
 ---
 title: gshop-api
-description: 使用 Node.js/Express 建構 REST API，部署於 GKE Autopilot，並透過 GitHub Actions 實現自動化 CI/CD。
+description: 電商系統的後端核心，負責商品、訂單與會員 API，串接 Supabase PostgreSQL 與 Google Cloud Storage。
 date: 2026-06-15
 image: /projects/api.jpg
+url: https://github.com/orgs/very-cool-gshop/repositories
 tags: ["Node.js", "GKE", "Kubernetes", "CI/CD", "PostgreSQL"]
 author:
   name: Gary

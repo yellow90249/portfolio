@@ -90,6 +90,8 @@ export default defineContentConfig({
       source: 'projects/*.md',
       schema: z.object({
         image: z.string().nonempty().editor({ input: 'media' }),
+        url: z.string().optional(),
+        demoUrl: z.string().optional(),
         date: z.date(),
         tags: z.array(z.string()),
         author: createAuthorSchema()

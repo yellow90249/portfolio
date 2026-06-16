@@ -93,7 +93,7 @@ defineOgImage('Portfolio', { title, description })
               :to="project.path"
               class="text-sm text-primary flex items-center"
             >
-              View Project
+              查看專案
               <UIcon
                 name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"

@@ -79,6 +79,31 @@ if (page.value.image) {
             v-if="page.body"
             :value="page"
           />
+          <div v-if="page.url || page.demoUrl" class="mt-12 pt-6 border-t border-default">
+            <p class="text-sm text-muted mb-3">相關連結</p>
+            <div class="flex flex-wrap gap-3">
+              <UButton
+                v-if="page.url"
+                :to="page.url"
+                target="_blank"
+                icon="i-simple-icons-github"
+                label="GitHub"
+                color="neutral"
+                variant="subtle"
+                size="sm"
+              />
+              <UButton
+                v-if="page.demoUrl"
+                :to="page.demoUrl"
+                target="_blank"
+                icon="i-lucide-external-link"
+                label="Live Demo"
+                color="neutral"
+                variant="subtle"
+                size="sm"
+              />
+            </div>
+          </div>
         </UPageBody>
       </UPage>
     </UContainer>
