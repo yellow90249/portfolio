@@ -23,25 +23,22 @@ about:
 experience:
   title: 工作經歷
   items:
-    - position: "資深後端工程師 @"
-      date: "2023 - Present"
+    - position: "後端工程師 @"
+      date: "2023 - 現在"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
+        name: 太禾科技
         url: "https://nuxt.com"
         color: "#00DC82"
     - position: "後端工程師 @"
-      date: "2022 - 2023"
+      date: "2021 - 2023"
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
+        name: 睿實科技
         url: "https://raycast.com"
         color: "#FF6363"
-    - position: "軟體工程師 @"
+    - position: "後端工程師 @"
       date: "2020 - 2021"
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
+        name: 華苓科技
         url: "https://linear.app"
         color: "#5E6AD2"
 testimonials:
