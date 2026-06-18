@@ -30,11 +30,7 @@ defineProps<{
             {{ experience.date }}
           </p>
           <USeparator />
-          <ULink
-            class="flex items-center gap-1"
-            :to="experience.company.url"
-            target="_blank"
-          >
+          <div class="flex items-center gap-1">
             <span class="text-sm">
               {{ experience.position }}
             </span>
@@ -43,9 +39,8 @@ defineProps<{
               :style="{ color: experience.company.color }"
             >
               <span class="font-medium">{{ experience.company.name }}</span>
-              <UIcon :name="experience.company.logo" />
             </div>
-          </ULink>
+          </div>
         </Motion>
       </div>
     </template>

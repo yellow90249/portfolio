@@ -27,25 +27,21 @@ experience:
       date: "2026 - 現在"
       company:
         name: 鑽誠科技
-        url: "https://nuxt.com"
         color: "#fdcb6e"
     - position: "後端工程師 @"
       date: "2023 - 2026"
       company:
         name: 太禾科技
-        url: "https://nuxt.com"
         color: "#00DC82"
     - position: "後端工程師 @"
       date: "2021 - 2023"
       company:
         name: 睿實科技
-        url: "https://raycast.com"
         color: "#FF6363"
     - position: "後端工程師 @"
       date: "2020 - 2021"
       company:
         name: 華苓科技
-        url: "https://linear.app"
         color: "#5E6AD2"
 testimonials:
   - quote: "Gary 從零開始架構了我們整個資料管道。他對分散式系統的深刻理解，以及針對故障模式進行設計的能力，為我們節省了無數的事故應對時間。吞吐量提升了 5 倍，p99 延遲降低了一半。"
