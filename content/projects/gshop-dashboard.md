@@ -5,6 +5,7 @@ date: 2026-06-15
 image: /projects/dashboard.jpg
 url: https://github.com/very-cool-gshop/gshop-dashboard
 demoUrl: https://dashboard.garydemo.com/
+demoNote: 訪客唯讀帳號：demouser@gmail.com / demo1234
 tags: ["Nuxt.js", "SSR", "GKE", "Kubernetes", "CI/CD"]
 author:
   name: Gary

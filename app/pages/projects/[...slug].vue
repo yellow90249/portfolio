@@ -75,12 +75,8 @@ if (page.value.image) {
           </div>
         </div>
         <UPageBody class="max-w-3xl mx-auto">
-          <ContentRenderer
-            v-if="page.body"
-            :value="page"
-          />
-          <div v-if="page.url || page.demoUrl" class="mt-12 pt-6 border-t border-default">
-            <p class="text-sm text-muted mb-3">相關連結</p>
+          <div v-if="page.url || page.demoUrl" class="mb-8 pb-6 border-b border-default">
+            <h2 class="text-2xl font-semibold mb-3">相關連結</h2>
             <div class="flex flex-wrap gap-3">
               <UButton
                 v-if="page.demoUrl"
@@ -103,7 +99,12 @@ if (page.value.image) {
                 size="sm"
               />
             </div>
+            <p v-if="page.demoNote" class="text-xs text-muted mt-3">{{ page.demoNote }}</p>
           </div>
+          <ContentRenderer
+            v-if="page.body"
+            :value="page"
+          />
         </UPageBody>
       </UPage>
     </UContainer>

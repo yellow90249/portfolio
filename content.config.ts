@@ -92,6 +92,7 @@ export default defineContentConfig({
         image: z.string().nonempty().editor({ input: 'media' }),
         url: z.string().optional(),
         demoUrl: z.string().optional(),
+        demoNote: z.string().optional(),
         date: z.date(),
         tags: z.array(z.string()),
         author: createAuthorSchema()
