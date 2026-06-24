@@ -25,25 +25,9 @@ author:
 
 ## 部署流程
 
-### 1. Build & Push Image（每次更新都要做）
+### 首次部署（一次性）
 
-```bash
-# API
-gcloud builds submit ./gshop-api \
-  --tag asia-east1-docker.pkg.dev/gshop-497319/gshop/api:latest
-
-# Dashboard
-gcloud builds submit ./gshop-dashboard \
-  --tag asia-east1-docker.pkg.dev/gshop-497319/gshop/dashboard:latest
-
-# Web
-gcloud builds submit ./gshop-web \
-  --tag asia-east1-docker.pkg.dev/gshop-497319/gshop/web:latest
-```
-
-> Cloud Build 在雲端 build（解決本地 Apple Silicon arm64/amd64 問題）
-
-### 2. 建立 Kubernetes Secret
+#### 1. 建立 Kubernetes Secret
 
 ```bash
 kubectl create secret generic gshop-api-secret \
@@ -53,7 +37,7 @@ kubectl create secret generic gshop-api-secret \
   --from-literal=ANTHROPIC_API_KEY="..."
 ```
 
-### 3. 建立 Cloudflare Origin Certificate TLS Secret
+#### 2. 建立 Cloudflare Origin Certificate TLS Secret
 
 ```bash
 kubectl create secret tls cloudflare-origin-cert \
@@ -61,7 +45,7 @@ kubectl create secret tls cloudflare-origin-cert \
   --key=private.key
 ```
 
-### 4. 套用 K8s 設定
+#### 3. 套用 K8s 設定
 
 ```bash
 kubectl apply -f k8s/backend-config.yaml
@@ -71,16 +55,15 @@ kubectl apply -f k8s/web-deployment.yaml
 kubectl apply -f k8s/ingress.yaml
 ```
 
-### 5. 更新部署（有新 commit 時）
+### 日常更新（CI/CD 自動執行）
 
-```bash
-# 重新 build image
-gcloud builds submit ./gshop-dashboard \
-  --tag asia-east1-docker.pkg.dev/gshop-497319/gshop/dashboard:latest
+三個 repo 都設有 GitHub Actions，push 到 main 自動完成：
 
-# 重啟 pod（Rolling Update，不會 downtime）
-kubectl rollout restart deployment/gshop-dashboard
 ```
+push main → GitHub Actions → docker build → push Artifact Registry → kubectl rollout restart
+```
+
+不需要手動 build 或部署。
 
 ---
 
