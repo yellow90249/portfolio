@@ -5,6 +5,7 @@ date: 2026-06-15
 image: /projects/web.jpg
 url: https://github.com/very-cool-gshop/gshop-web
 demoUrl: https://web.garydemo.com/
+demoNote: 測試帳號，電子郵件/密碼：lucas@gmail.com / 0000
 tags: ["Nuxt.js", "SSR", "GKE", "Cloudflare", "CI/CD"]
 author:
   name: Gary
