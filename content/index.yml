@@ -24,12 +24,7 @@ experience:
   title: 工作經歷
   items:
     - position: "後端工程師 @"
-      date: "2026 - 現在"
-      company:
-        name: 鑽誠科技
-        color: "#fdcb6e"
-    - position: "後端工程師 @"
-      date: "2024 - 2026"
+      date: "2024 - 現在"
       company:
         name: 太禾科技
         color: "#00DC82"
