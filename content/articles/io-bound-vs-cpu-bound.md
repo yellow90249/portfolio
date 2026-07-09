@@ -2,7 +2,7 @@
 title: "I/O 密集 vs CPU 密集：執行緒數該開多少？"
 description: 拆解 I/O 為什麼是瓶頸、CPU/RAM 與外部裝置的分界線、為什麼 CPU 密集任務用不上 async，以及執行緒數該對齊物理核心還是邏輯核心。
 date: 2026-07-09
-image: /images/project-api.jpg
+image: /images/data-flow.jpg
 minRead: 8
 author:
   name: Gary

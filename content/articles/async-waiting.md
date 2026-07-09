@@ -2,7 +2,7 @@
 title: "Async 到底在解決什麼問題？"
 description: 從「等待」的角度重新理解非同步存在的目的，並拆解 I/O、計時器、使用者互動、執行緒同步、硬體協作等不同類型的等待。
 date: 2026-07-09
-image: /images/structure.png
+image: /images/data-flow.jpg
 minRead: 6
 author:
   name: Gary

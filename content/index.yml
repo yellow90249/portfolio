@@ -60,6 +60,13 @@ testimonials:
       avatar:
         src: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Johnson'
         srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Johnson 2x'
+  - quote: "Gary 的 MT 很強。"
+    author:
+      name: '阿狗'
+      description: '友人四號'
+      avatar:
+        src: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Agou99'
+        srcset: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Agou99 2x'
 blog:
   title: "最新文章"
   description: "最近的一些想法。"

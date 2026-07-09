@@ -2,7 +2,7 @@
 title: "Callback 是什麼？"
 description: 精確定義 callback、判斷標準與常見誤解，介紹 JavaScript 中常用到 callback 的內建函數、Callback Hell 問題，以及它與 Promise、async/await 的關係。
 date: 2026-07-09
-image: /images/architecture.jpg
+image: /images/data-flow.jpg
 minRead: 6
 author:
   name: Gary
